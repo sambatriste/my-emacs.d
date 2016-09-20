@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: xmlcode
+# key: xmlcode
+# binding: direct-keybinding
+# --
+<pre><code class="xml">
+$0
+</code></pre>

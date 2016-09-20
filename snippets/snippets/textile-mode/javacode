@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: javacode
+# key: javacode
+# binding: direct-keybinding
+# --
+<pre><code class="java">
+$0
+</code></pre>

@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: solarized-light
+# key: solarizedL
+# binding: direct-keybinding
+# --
+
+#+SETUPFILE: ~/.emacs.d/lib/org-mode/theme/solarized-light.org

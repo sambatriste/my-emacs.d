@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: update
+# key: ud
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+update
+  ${1:table}
+set
+  ${2:column} = ${3:value}
+where
+  $0

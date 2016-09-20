@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: refference_to
+# key: reft
+# binding: direct-keybinding
+# --
+\ :ref:`$0`\ 

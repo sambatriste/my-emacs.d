@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ppt
+# key: ppt
+# binding: direct-keybinding
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+.. ppt-shape:: $1
+   :pptfilename: _images.pptx
+   :shapename: $1
+   :scale: 30
+$0
+

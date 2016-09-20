@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: annotation
+# key: annotation
+# binding: direct-keybinding
+# --
+\ [#]_ 
+
+.. [#]
+  $0

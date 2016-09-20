@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: magic_comment
+# key: magic
+# binding: direct-keybinding
+# --
+# -*- mode: org; coding: utf-8-unix -*-
+
+$1

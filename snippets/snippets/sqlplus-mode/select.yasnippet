@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: expand to 'select'
+# key: sl
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+select
+  ${2:column}
+from
+  ${1:table}
+where
+  $0

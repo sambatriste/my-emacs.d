@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bigblow
+# key: bigblow
+# binding: direct-keybinding
+# --
+
+#+SETUPFILE: ~/.emacs.d/lib/org-mode/theme/bigblow.org
