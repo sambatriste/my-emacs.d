@@ -51,6 +51,8 @@
   :config
   (global-git-gutter-mode))
 
+;; リージョン選択の色
+(set-face-attribute 'region nil :background "lavender")
 
 (if (and (mac?) (window-system))
     (progn
