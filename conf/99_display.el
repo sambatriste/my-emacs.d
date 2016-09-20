@@ -50,3 +50,21 @@
 (use-package git-gutter-fringe
   :config
   (global-git-gutter-mode))
+
+
+(if (and (mac?) (window-system))
+    (progn
+      (setq initial-frame-alist
+            '((width . 170)  ; フレーム幅(文字数)
+              (height . 58)  ; フレーム高(文字数)
+              (top . 0)      ; フレームの Y 位置(ピクセル数)
+              (left . 48)	 ; フレームの X 位置(ピクセル数)
+              ))))
+
+(if (and (win?) (window-system))
+    (setq initial-frame-alist
+          '((width . 130)  ; フレーム幅(文字数)
+            (height . 69)  ; フレーム高(文字数)
+            (top . 0)      ; フレームの Y 位置(ピクセル数)
+            (left . 960)	 ; フレームの X 位置(ピクセル数)
+            )))

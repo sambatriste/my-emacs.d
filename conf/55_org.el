@@ -114,11 +114,11 @@
 ;; で、文字化けする。
 ;; のでやっぱり"C"にする。
 
-(add-hook 'org-mode-hook
-          (lambda ()
-            (progn
-              (set (make-local-variable 'system-time-locale) "C")
-              (load-file "~/.emacs.d/bin/flysphinx.el"))))
+;; (add-hook 'org-mode-hook
+;;           (lambda ()
+;;             (progn
+;;               (set (make-local-variable 'system-time-locale) "C")
+;;               (load-file "~/.emacs.d/bin/flysphinx.el"))))
 
 
 

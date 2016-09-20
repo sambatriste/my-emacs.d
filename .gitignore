@@ -5,3 +5,5 @@ elpa/
 history
 recentf
 server/server
+projectile-bookmarks.eld
+eshell/
