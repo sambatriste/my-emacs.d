@@ -1,3 +1,5 @@
-(add-to-list 'load-path "~/.new-emacs.d/elisp")
-(require 'init-loader)
-(init-loader-load "~/.new-emacs.d/conf")
+(let ((my-emacsd "~/.emacs.d/"))
+   (add-to-list 'load-path (expand-file-name  "elisp" my-emacsd))
+   (require 'init-loader)
+   (init-loader-load (expand-file-name "conf" my-emacsd)))
+  

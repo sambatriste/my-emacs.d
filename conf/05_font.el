@@ -25,18 +25,14 @@
 	  (".*monaco-bold-.*-mac-roman" . 0.9)
 	  ("-cdac$" . 1.3))))
 
-(if (linux?)
-    (set-face-attribute 'default nil
-                        :family "monospace"
-                        :height 120))
 
 
 (if (win?)
     (progn
-
-;;      (set-frame-font "Migu 1M-10")
-      (set-frame-font "ARISAKA-等幅-10")
-;;      (set-frame-font "Consolas-9")
+      (set-frame-font "Migu 1M-11")
+      (set-default-font "Migu 1M-11")
+;;      (set-frame-font "ARISAKA-等幅-10")
+;;      (set-frame-font "Consolas-11")
       )
 )
 

@@ -20,15 +20,10 @@
         cider-overlays-use-font-lock t)
   (cider-repl-toggle-pretty-printing))
 
-(use-package cider-eval-sexp-fu)
+;; windowsでエラーがでたので
+;;(use-package cider-eval-sexp-fu)
 
 (use-package clj-refactor
   :diminish clj-refactor-mode
   :config (cljr-add-keybindings-with-prefix "C-c j"))
 
-(message "init.el loaded!!")
-
-(add-hook 'after-init-hook
-          (lambda ()
-            (message "init time: %.3f sec"
-                     (float-time (time-subtract after-init-time before-init-time)))))

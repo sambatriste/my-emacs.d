@@ -1,8 +1,15 @@
 ;;; -*- coding: utf-8-unix -*-
 (use-package migemo
   :config
-  (setq migemo-command "/usr/local/bin/cmigemo")
-  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+  (if (win?)
+      ;;http://d.hatena.ne.jp/bobchin/20100831
+      (progn
+        (setq migemo-command "C:/tools/cmigemo-default-win64/cmigemo.exe")
+        (setq migemo-dictionary "C:/tools/cmigemo-default-win64/dict/utf-8/migemo-dict" )))
+  (if (mac?)
+      (progn
+        (setq migemo-command "/usr/local/bin/cmigemo")
+        (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")))
   ;; platform independent settings.
   (setq migemo-user-dictionary nil)
   (setq migemo-regex-dictionary nil)

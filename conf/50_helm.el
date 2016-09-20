@@ -13,7 +13,7 @@
              ("M-y" . helm-show-kill-ring)
              ;; helm-occurの起動
              ("C-M-o" . helm-occur)
-             ("C-x r" . helm-recentf))
+             ("C-c r" . helm-recentf))
 
   ;; isearchからhelm-occurを起動
   ;(define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch)
@@ -31,3 +31,4 @@
 
 
 ;(use-package helm-migemo)
+
