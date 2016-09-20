@@ -1,10 +1,5 @@
 ;;; -*- coding: utf-8-unix -*-
 
-(when (require 'server nil t)
-  (global-set-key (kbd "C-x C-c") 'server-edit)
-  (defalias 'exit 'save-buffers-kill-emacs)
-  (unless (server-running-p)
-    (if window-system (server-start))))
 
 ;;; set up exec-path
 (use-package exec-path-from-shell
