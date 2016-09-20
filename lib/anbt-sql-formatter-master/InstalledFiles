@@ -1,0 +1,10 @@
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/anbt-sql-formatter
+/Library/Ruby/Site/1.8/anbt-sql-formatter/coarse-tokenizer.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/constants.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/exception.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/formatter.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/helper.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/parser.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/rule.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/token.rb
+/Library/Ruby/Site/1.8/anbt-sql-formatter/version.rb
