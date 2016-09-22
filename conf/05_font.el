@@ -39,8 +39,6 @@
     
 (if (arm?)
     (progn
-      (set-frame-font "Migu 1M-10")
-      (set-default-font "Migu 1M-10")
-      )
-)
+      (set-frame-font "Migu 1M-11")
+      (set-default-font "Migu 1M-11")))
 

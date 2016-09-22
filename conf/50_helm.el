@@ -23,7 +23,7 @@
   :config
   (mykie:set-keys nil
     "C-x C-f"
-    :default (call-interactively 'find-file)
+    :default (call-interactively 'helm-find-files)
     :C-u! helm-ls-git-ls))
 
 (use-package helm-ag

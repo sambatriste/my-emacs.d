@@ -6,16 +6,18 @@
 ;; ツールバー
 (tool-bar-mode -1)
 
-;;スクロールバー
-(scroll-bar-mode nil)
-
 ;;メニューバー
 (menu-bar-mode t)
 
-;; 行番号
-(global-linum-mode t)
-;; 行番号フォーマット
-(setq linum-format "%3d")
+
+(if (not (arm?))
+    (progn
+      ;; 行番号
+      (global-linum-mode t)
+      ;; 行番号フォーマット
+      (setq linum-format "%3d")
+      ;;スクロールバー
+      (scroll-bar-mode nil)))
 
 ;; 列番号
 (column-number-mode t)
@@ -43,9 +45,14 @@
 
 (use-package hl-line
   :config
-  (global-hl-line-mode 1)
-  (set-face-background 'hl-line "#fff090"))
-
+;  (global-hl-line-mode 1)
+  (set-face-background 'hl-line "LemonChiffon")
+  (defun global-hl-line-timer-function ()
+    (global-hl-line-unhighlight-all)
+    (let ((global-hl-line-mode t))
+      (global-hl-line-highlight)))
+  (setq global-hl-line-timer
+        (run-with-idle-timer 0.05 t 'global-hl-line-timer-function)))
 
 ;; Gitの変更箇所を表示
 (use-package git-gutter-fringe
@@ -54,7 +61,7 @@
   (global-git-gutter-mode))
 
 ;; リージョン選択の色
-(set-face-attribute 'region nil :background "lavender")
+(set-face-attribute 'region nil :background "MediumAquamarine")
 
 (if (and (mac?) (window-system))
     (progn
@@ -72,3 +79,4 @@
             (top . 0)      ; フレームの Y 位置(ピクセル数)
             (left . 960)   ; フレームの X 位置(ピクセル数)
             )))
+

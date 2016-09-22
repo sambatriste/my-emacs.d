@@ -4,7 +4,7 @@
 (defvar os-type nil)
 (cond ((string-match "apple-darwin" system-configuration) ;; Mac
        (setq os-type 'mac))
-      ((string-match "arm-.*" system-configuration)        ;; ARM
+      ((string-match "arm*" system-configuration)        ;; ARM
        (setq os-type 'arm))
       ((string-match "freebsd" system-configuration)      ;; FreeBSD
        (setq os-type 'bsd))

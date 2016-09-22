@@ -10,6 +10,11 @@
       (progn
         (setq migemo-command "/usr/local/bin/cmigemo")
         (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")))
+  (if (arm?)
+      (progn
+        (setq migemo-command "/usr/bin/cmigemo")
+        (setq migemo-dictionary "/usr/share/cmigemo/utf-8/migemo-dict")))
+
   ;; platform independent settings.
   (setq migemo-user-dictionary nil)
   (setq migemo-regex-dictionary nil)

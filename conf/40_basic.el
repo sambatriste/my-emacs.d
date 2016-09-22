@@ -21,7 +21,13 @@
 ;;; happy (((()))) !!!
 (use-package paren
   :init
-  (setq show-paren-style 'parenthesis)
+;;  (setq show-paren-style 'parenthesis)
+  
+  (setq show-paren-style 'expression)
+  (set-face-attribute 'show-paren-match-face nil
+                      :background "#F0F0FF"
+                      :foreground nil
+                      :weight 'normal)
   (show-paren-mode 1))
 
 ;;; yasnippet
@@ -54,7 +60,7 @@
 ;;; answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;;http://www.emacswiki.org/emacs/AlignCommands
+;;http://www.emacswiki.orug/emacs/AlignCommands
 (defun align-repeat (start end regexp)
   "Repeat alignment with respect to 
      the given regular expression."
@@ -77,7 +83,6 @@
   (setq truncate-lines nil)
   ;; 折り返し表示ON/OFF
   (global-set-key (kbd "C-c l") 'toggle-truncate-lines))
-
 
 
 (use-package real-auto-save
