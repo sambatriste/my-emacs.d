@@ -86,5 +86,8 @@
   ;;(setq real-auto-save-interval 10)
   ;; (add-hook 'prog-mode-hook 'real-auto-save-mode)
   (add-hook 'find-file-hook 'real-auto-save-mode))
- 
- 
+
+
+;; auto-revertマイナーモードをdiminishしたいので明示的に設定を記載する。
+(with-eval-after-load "autorevert"
+  (diminish 'auto-revert-mode))
