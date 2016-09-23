@@ -26,6 +26,7 @@
 
 ;;; yasnippet
 (use-package yasnippet
+  :diminish yas-minor-mode
   :init
   (yas-global-mode 1)
   (bind-keys :map yas-minor-mode-map
@@ -46,6 +47,7 @@
 
 
 (use-package undo-tree
+  :diminish undo-tree-mode
   :config
   (global-undo-tree-mode))
 
@@ -79,6 +81,7 @@
 
 
 (use-package real-auto-save
+  :diminish real-auto-save-mode
   :config
   ;;(setq real-auto-save-interval 10)
   ;; (add-hook 'prog-mode-hook 'real-auto-save-mode)

@@ -1,6 +1,7 @@
 ;;; -*- coding: utf-8-unix -*-
 
 (use-package whitespace
+  :diminish global-whitespace-mode
   :config
   (setq whitespace-style
         '(face

@@ -36,6 +36,7 @@
 (setq history-length 3000)
 
 (use-package volatile-highlights
+  :diminish volatile-highlights-mode
   :config
   (volatile-highlights-mode t))
 
@@ -48,6 +49,7 @@
 
 ;; Gitの変更箇所を表示
 (use-package git-gutter-fringe
+  :diminish git-gutter-mode
   :config
   (global-git-gutter-mode))
 
