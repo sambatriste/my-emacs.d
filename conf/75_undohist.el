@@ -1,4 +1,5 @@
 ;;; -*- coding: utf-8-unix -*-
 
-(when (require 'undohist nil t)
+(use-package undohist
+  :config
   (undohist-initialize))
