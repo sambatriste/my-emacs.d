@@ -8,7 +8,7 @@
   (interactive)
   (ucs-normalize-NFC-region (point-min) (point-max)))
 (global-set-key (kbd "C-x RET u") 'ucs-normalize-NFC-buffer)
-(if (mac?)
+(if (unix?)
     ;; Mac
     (progn
       (prefer-coding-system 'utf-8-unix)
