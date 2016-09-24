@@ -28,14 +28,6 @@
   ;;スクロールバー
   (scroll-bar-mode t)))
 
-
-(progn
-(if (not (arm?))
-    
-  )
-
-
-
 ;; 列番号
 (column-number-mode t)
 
