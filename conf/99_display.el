@@ -9,15 +9,32 @@
 ;;メニューバー
 (menu-bar-mode t)
 
+;; visible-bell
+(setq visible-bell t)
 
+
+(cond
+ ;; ARMだと動作が重いので、軽量な設定にする。
+ ((arm?)
+  (set-default 'indicate-empty-lines t)
+  (setq-default indicate-buffer-boundaries 'right)
+  ;;スクロールバー
+  (scroll-bar-mode -1))
+ (t
+  ;; 行番号
+  (global-linum-mode t)
+  ;; 行番号フォーマット
+  (setq linum-format "%3d")
+  ;;スクロールバー
+  (scroll-bar-mode t)))
+
+
+(progn
 (if (not (arm?))
-    (progn
-      ;; 行番号
-      (global-linum-mode t)
-      ;; 行番号フォーマット
-      (setq linum-format "%3d")
-      ;;スクロールバー
-      (scroll-bar-mode nil)))
+    
+  )
+
+
 
 ;; 列番号
 (column-number-mode t)
@@ -52,7 +69,7 @@
     (let ((global-hl-line-mode t))
       (global-hl-line-highlight)))
   (setq global-hl-line-timer
-        (run-with-idle-timer 0.05 t 'global-hl-line-timer-function)))
+        (run-with-idle-timer 0.04 t 'global-hl-line-timer-function)))
 
 ;; Gitの変更箇所を表示
 (use-package git-gutter-fringe
@@ -69,7 +86,7 @@
             '((width . 170)  ; フレーム幅(文字数)
               (height . 58)  ; フレーム高(文字数)
               (top . 0)      ; フレームの Y 位置(ピクセル数)
-              (left . 48)	 ; フレームの X 位置(ピクセル数)
+              (left . 48)    ; フレームの X 位置(ピクセル数)
               ))))
 
 (if (and (win?) (window-system))
