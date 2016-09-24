@@ -1,14 +1,8 @@
 ;;; -*- coding: utf-8-unix -*-
 (use-package paredit
-  :defer t
   :config
   (bind-keys :map paredit-mode-map
-             ("C-h" . paredit-backward-delete))
-
-  (defun conditionally-enable-paredit-mode ()
-    (if (eq this-command 'eval-expression)
-        (paredit-mode 1)))
-  (add-hook 'minibuffer-setup-hook 'conditionally-enable-paredit-mode))
+             ("C-h" . paredit-backward-delete)))
 
 (use-package eldoc
   :defer t
