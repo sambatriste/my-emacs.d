@@ -20,7 +20,7 @@
 
 ;;; happy (((()))) !!!
 (use-package paren
-  :init
+  :config
 ;;  (setq show-paren-style 'parenthesis)
   
   (setq show-paren-style 'expression)
