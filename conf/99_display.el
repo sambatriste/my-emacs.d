@@ -28,6 +28,8 @@
   ;;スクロールバー
   (scroll-bar-mode t)))
 
+
+
 ;; 列番号
 (column-number-mode t)
 
