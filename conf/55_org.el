@@ -5,7 +5,7 @@
 ;; (setq org-todo-keywords
 ;;       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")
 ;;         (sequence "APPT(a)" "|" "DONE(d)" "CANCEL(c)")))
-(setq org-directory "~/org/")
+(setq org-directory "~/org/org-files/")
 (setq org-default-notes-file (expand-file-name "main.org" org-directory))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
