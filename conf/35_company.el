@@ -4,7 +4,7 @@
   :diminish company-mode
   :config
   (global-company-mode)
-  (setq company-idle-delay 0.5
+  (setq company-idle-delay 0.3
         company-minimum-prefix-length 4
         company-selection-wrap-around t)
   (bind-keys :map company-mode-map
