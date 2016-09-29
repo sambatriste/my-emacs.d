@@ -5,7 +5,7 @@
 ;; (setq org-todo-keywords
 ;;       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")
 ;;         (sequence "APPT(a)" "|" "DONE(d)" "CANCEL(c)")))
-(setq org-directory "~/org/org-files/")
+(setq org-directory "~/org/")
 (setq org-default-notes-file (expand-file-name "main.org" org-directory))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
@@ -28,25 +28,15 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 
 
-;;   (define-key global-map "\C-cl" 'org-store-link)
-;;   (define-key global-map "\C-ca" 'org-agenda)
-;;   (setq org-log-done t)
-;; )
-
-
-
-
 (setq org-agenda-custom-commands
       '(("o" "Office block "
          ((agenda "+OFFICE")
           (tags-todo "+OFFICE+CATEGORY=\"Tasks\"+LEVEL>=2+Effort=\"\"")
           (tags-todo "+OFFICE+CATEGORY=\"Projects\"+LEVEL>=4+Effort=\"\"")
-                                        ;(tags-todo "LEVEL>=3+OFFICE+SCHEDULED=\"\"")
-                                        ;会社のプロジェクトでレベル以上でスケジューリングされていないタスク
-          (tags "+OFFICE+CATEGORY=\"Projects\"+TODO<>\"DONE\"+LEVEL>=4+SHEDULED=\"\"")
-          ))
-        ("!" "Someday" tags "CATEGORY=\"Someday\"")
-        ))
+          ;;(tags-todo "LEVEL>=3+OFFICE+SCHEDULED=\"\"")
+          ;;会社のプロジェクトでレベル以上でスケジューリングされていないタスク
+          (tags "+OFFICE+CATEGORY=\"Projects\"+TODO<>\"DONE\"+LEVEL>=4+SHEDULED=\"\"")))
+        ("!" "Someday" tags "CATEGORY=\"Someday\"")))
 
 ;;org-stuck-projects
 ;;(setq org-enforce-todo-dependencies t)
