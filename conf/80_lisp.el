@@ -29,3 +29,15 @@
   :config
   ;; clispをデフォルトのCommon Lisp処理系に設定
   (setq inferior-lisp-program "clisp"))
+
+(use-package lispxmp
+  :config
+  (defun my-lispxmp ()
+    "evalueate sexp and print as comment."
+    (interactive)
+    (insert-string "  ; =>")
+    (lispxmp))
+  (bind-keys :map emacs-lisp-mode-map
+              ("C-c C-j". my-lispxmp)))
+
+
