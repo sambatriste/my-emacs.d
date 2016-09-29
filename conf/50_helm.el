@@ -13,11 +13,10 @@
              ("M-y" . helm-show-kill-ring)
              ;; helm-occurの起動
              ("C-M-o" . helm-occur)
-             ("C-c r" . helm-recentf))
-
-  ;; isearchからhelm-occurを起動
-  ;(define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch)
-  )
+             ("C-M-r" . helm-recentf))
+  (bind-keys :map isearch-mode-map
+             ;; isearchからhelm-occurを起動
+             ("C-o" . helm-occur-from-isearch)))
 
 (use-package helm-ls-git
   :config
