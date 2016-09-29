@@ -2,4 +2,6 @@
 
 (use-package undohist
   :config
-  (undohist-initialize))
+  (undohist-initialize)
+  (setq undohist-ignored-files
+        '("COMMIT_EDITMSG")))
