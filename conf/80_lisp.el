@@ -36,8 +36,12 @@
     "evalueate sexp and print as comment."
     (interactive)
     (insert-string "  ; =>")
-    (lispxmp))
-  (bind-keys :map emacs-lisp-mode-map
-              ("C-c C-j". my-lispxmp)))
+    (lispxmp)
+    (end-of-line))
+  :bind
+  (:map emacs-lisp-mode-map
+        ("C-c C-j" . my-lispxmp)
+        :map lisp-interaction-mode-map
+        ("C-c C-j" . my-lispxmp)))
 
 
