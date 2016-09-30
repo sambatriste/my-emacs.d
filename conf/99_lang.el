@@ -1,6 +1,6 @@
 ;;; -*- coding: utf-8-unix -*-
 
-(set-language-environment "UTF-8")
+;(set-language-environment "UTF-8")
 
 
 ;; https://gist.github.com/sky-y/3264252
