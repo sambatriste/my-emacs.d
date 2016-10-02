@@ -21,7 +21,3 @@
         (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
         (".*monaco-bold-.*-mac-roman" . 0.9)
         ("-cdac$" . 1.3)))
-;; https://github.com/yewton/.emacs.d/blob/master/my-osx.org
-;; Menlo の場合は日本語にヒラギノが使われるので、
-;; ascii に対して 1.2 倍サイズであることを明示する。
-(add-to-list 'face-font-rescale-alist '(".*Hiragino.*" . 1.2))
