@@ -72,7 +72,7 @@
   (global-git-gutter-mode))
 
 ;; リージョン選択の色
-(set-face-attribute 'region nil :background "MediumAquamarine")
+(set-face-attribute 'region nil :background "Darkseagreen1")
 
 (if (and (mac?) (window-system))
     (progn
