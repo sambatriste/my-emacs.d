@@ -8,17 +8,19 @@
 (defun dired-my-advertised-find-file ()
   "フォルダを開く時, 新しいバッファを作成しない"
   (interactive)
-  (let ((kill-target (current-buffer))
+  (if (my-parent-dir?) (dired-my-up-directory)
+    (let ((kill-target (current-buffer))
         (check-file (dired-get-filename)))
     (funcall 'dired-find-file)
     (if (file-directory-p check-file)
-        (kill-buffer kill-target))))
+        (kill-buffer kill-target)))))
 
 (defun dired-my-up-directory (&optional other-window)
   "Run dired on parent directory of current directory.
 Find the parent directory either in this buffer or another buffer.
 Creates a buffer if necessary."
   (interactive "P")
+  
   (let* ((dir (dired-current-directory))
          (up (file-name-directory (directory-file-name dir))))
     (or (dired-goto-file (directory-file-name dir))
@@ -52,6 +54,9 @@ Creates a buffer if necessary."
 ;; diredバッファでC-sした時にファイル名だけにマッチするように
 (setq dired-isearch-filenames t)
 
+(defun my-parent-dir? ()
+  (let* ((f (dired-get-filename 'no-dir t)))
+    (string= f "..")))
 
 (defun my-x-open (file)
   "open file by a associated program."
@@ -73,7 +78,8 @@ Creates a buffer if necessary."
 (defun dired-open-file ()
   "In dired, open the file named on this line."
   (interactive)
-  (my-x-open (dired-get-filename)))
+  (if (parent-dir?) (dired-my-up-directory)
+    (my-x-open (dired-get-filename))))
 
 (define-key dired-mode-map "o" 'dired-open-file)
 
