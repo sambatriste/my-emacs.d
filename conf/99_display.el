@@ -10,7 +10,12 @@
 (menu-bar-mode t)
 
 ;; visible-bell
-(setq visible-bell t)
+(if (mac?)
+    (progn
+        (setq visible-bell nil)
+        (setq ring-bell-function 'ignore))
+  (setq visible-bell t))
+
 
 
 (cond
