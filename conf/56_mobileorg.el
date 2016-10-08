@@ -11,7 +11,7 @@
 
 ;; org-agenda-files に追加 これで管理するorgファイルを指定
 ;; todo.orgはすでについかされているぽい
-(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
+;;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
 (add-to-list 'org-agenda-files (concat org-directory "main.org") t)
 (add-to-list 'org-agenda-files (concat org-directory "project.org") t)
 ;;(add-to-list 'org-agenda-files (concat org-directory "scrum.org") t)

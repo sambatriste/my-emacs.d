@@ -15,7 +15,7 @@
     (back-to-indentation)))
 
 (defun beginning-of-visual-indented-line (current-point)
-  "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文 字しかない場合は、行頭に戻る。"
+  "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
   (interactive "d")
   (let ((vhead-pos (save-excursion (progn (beginning-of-visual-line) (point))))
         (head-pos (save-excursion (progn (beginning-of-line) (point)))))

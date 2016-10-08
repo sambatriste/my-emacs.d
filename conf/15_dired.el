@@ -78,7 +78,7 @@ Creates a buffer if necessary."
 (defun dired-open-file ()
   "In dired, open the file named on this line."
   (interactive)
-  (if (parent-dir?) (dired-my-up-directory)
+  (if (my-parent-dir?) (dired-my-up-directory)
     (my-x-open (dired-get-filename))))
 
 (define-key dired-mode-map "o" 'dired-open-file)
