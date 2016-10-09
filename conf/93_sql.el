@@ -8,24 +8,24 @@
 (defun anbt-sql-formatter:format ()
   "Format SQL on specified region."
   (interactive)
+  (destructuring-bind (begin end)
+      (if mark-active
+          (list (region-beginning) (region-end))
+        (list (point-min) (point-max)))
+    (format-sql begin end)))
 
-  (let ((beg)
-        (end))
-    (if mark-active
-        (setq beg (region-beginning)
-              end (region-end))
-      (setq beg (point-min)
-            end (point-max)))
-    (save-excursion
-      (shell-command-on-region
-       beg end
-       (format "ruby %s" (expand-file-name anbt-sql-formatter:formatter-path)) nil t))))
+(defun format-sql (begin end)
+  (save-excursion
+    (shell-command-on-region
+     begin
+     end
+     (format "ruby %s" (expand-file-name anbt-sql-formatter:formatter-path)) nil t)))
+
 (add-hook 'sql-mode-hook
           (lambda ()
             (define-key sql-mode-map (kbd "C-S-f") 'anbt-sql-formatter:format)))
 
-
 ;; sql-modeの文字化け対策
 (add-hook 'sql-interactive-mode-hook
           (function (lambda ()
-                      (set-buffer-process-coding-system 'utf-8-nfd 'utf-8-nfd))))
+                      (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))))
