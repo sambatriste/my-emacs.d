@@ -1,9 +1,9 @@
 ;;; -*- coding: utf-8-unix -*-
 
 ;;; SQL文の整形をする設定
-(defvar sql-format-external-command
-  (concat "java -jar " (expand-file-name "~/.emacs.d/lib/sql-formatter-all-1.0.0.jar"))
-  "SQLをフォーマットするための外部コマンド")
+(setq sql-format-external-command
+  (concat "java -jar " (expand-file-name "~/.emacs.d/lib/sql-formatter-1.0.0-jar-with-dependencies.jar")))
+;; SQL文をフォーマットする関数
 (defun my-format-sql ()
   "バッファまたはリージョン内のSQL文を整形する。"
   (interactive)
@@ -23,9 +23,9 @@
        t ; replace buffer
        ))))
 
-(add-hook 'sql-mode-hook
-          (lambda ()
-            (define-key sql-mode-map (kbd "C-S-f") 'my-format-sql)))
+(with-eval-after-load "sql"
+  (define-key sql-mode-map (kbd "C-S-f") 'my-format-sql))
+
 
 
 

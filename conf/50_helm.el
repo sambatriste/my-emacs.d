@@ -27,9 +27,22 @@
     :C-u! helm-ls-git-ls))
 
 (use-package helm-ag
+  :config
+  (defun helm-projectile-ag ()
+    "Projectileとagを連携"
+    (interactive)
+    (let ((pj-root-dir (ignore-errors (projectile-project-root))))
+      (if pj-root-dir
+          (helm-ag pj-root-dir)
+        (helm-ag))))
   :bind ("C-x C-g" . helm-do-ag-project-root))
+
 
 (use-package helm-descbinds
   :pin "melpa-stable")
 ;(use-package helm-migemo)
+
+
+
+
 
