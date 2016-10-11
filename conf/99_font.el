@@ -28,3 +28,10 @@
           (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
           (".*monaco-bold-.*-mac-roman" . 0.9)
           ("-cdac$" . 1.3))))
+
+(when (win?)
+  (set-frame-font "Migu 1M-11")
+  (set-default-font "Migu 1M-11")
+;;      (set-frame-font "ARISAKA-等幅-10")
+;;      (set-frame-font "Consolas-11")
+  )

@@ -1,7 +1,6 @@
 ;;; -*- coding: utf-8-unix -*-
 
-;(set-language-environment "UTF-8")
-
+(require 'ucs-normalize)
 
 ;; https://gist.github.com/sky-y/3264252
 (defun ucs-normalize-NFC-buffer ()
@@ -14,8 +13,7 @@
   (setq file-name-coding-system 'utf-8-unix)
   (setq locale-coding-system 'utf-8-unix)
   (set-terminal-coding-system 'utf-8-unix)
-  (set-buffer-file-coding-system 'utf-8-unix)
-  (require 'ucs-normalize))
+  (set-buffer-file-coding-system 'utf-8-unix))
 
 (when (win?)
   (prefer-coding-system 'utf-8-unix)
