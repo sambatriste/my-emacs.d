@@ -10,7 +10,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; (save-window-excursion (shell-command (format "emacs-test -l test-minimum -l %s %s &" buffer-file-name buffer-file-name)))
-(require 'org-install)
 (setq org-startup-truncated nil)
 (setq org-return-follows-link t)
 
