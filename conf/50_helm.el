@@ -1,7 +1,6 @@
 ;;; -*- coding: utf-8-unix -*-
 
 
-helm-mini-default-sources  ; => (helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-ls-git)
 (use-package helm
   :config
   (setq helm-quick-update t
