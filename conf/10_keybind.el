@@ -1,4 +1,4 @@
-;;; -*- mode: emacs-lisp; coding: utf-8-unix -*-
+;;; -*- coding: utf-8-unix -*-
 
 ;; C-hをバックスペースに割り当て
 (keyboard-translate ?\C-h ?\C-?)
@@ -17,8 +17,9 @@
 (global-set-key (kbd "C-<return>") 'cua-rectangle-mark-mode)
 
 
-;; Macの場合
+
 (cond
+ ;; Macの場合
  ((mac?)
   (define-key global-map [165] nil)
   (define-key global-map [67109029] nil)
@@ -31,6 +32,7 @@
   ;; OptionキーとCommandキーを入れ替え
   (setq ns-command-modifier (quote meta))
   (setq ns-alternate-modifier (quote super)))
+ ;; Windows
  ((win?)
   (global-set-key [M-kanji] 'ignore)
   (global-set-key [non-convert] 'ignore)
@@ -38,4 +40,9 @@
   (global-set-key [convert] 'ignore)
   ;; (setq pc-select-selection-keys-only t)
   ;; (pc-selection-mode t)
-  ))
+  )
+ ;; Arm (Chromebook C100PA)
+ ((arm?)
+  ;; Ctrlとパッド同時押しの誤動作を防ぐ
+  (global-unset-key [C-down-mouse-1])
+  (global-unset-key [down-mouse-1])))
