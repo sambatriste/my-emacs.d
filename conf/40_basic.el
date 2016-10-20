@@ -85,12 +85,10 @@
   (global-set-key (kbd "C-c l") 'toggle-truncate-lines))
 
 
-(use-package real-auto-save
-  :diminish real-auto-save-mode
+(use-package auto-save-buffers-enhanced
   :config
-  ;;(setq real-auto-save-interval 10)
-  ;; (add-hook 'prog-mode-hook 'real-auto-save-mode)
-  (add-hook 'find-file-hook 'real-auto-save-mode))
+  (setq auto-save-buffers-enhanced-interval 10)
+  (auto-save-buffers-enhanced t))
 
 
 ;; auto-revertマイナーモードをdiminishしたいので明示的に設定を記載する。
