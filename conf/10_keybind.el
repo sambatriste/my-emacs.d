@@ -9,7 +9,7 @@
 (windmove-default-keybindings)
 
 (global-set-key (kbd "M-K") 'kill-this-buffer)
-(global-set-key (kbd "C-o") 'other-window)
+;(global-set-key (kbd "C-o") 'other-window)
 (global-set-key (kbd "C-;") 'delete-other-windows)
 
 ;;; http://qiita.com/kwappa/items/639b40ef0e18170edf43
