@@ -16,8 +16,6 @@
         (setq ring-bell-function 'ignore))
   (setq visible-bell t))
 
-
-
 (cond
  ;; ARMだと動作が重いので、軽量な設定にする。
  ((arm?)
@@ -26,13 +24,8 @@
   ;;スクロールバー
   (scroll-bar-mode -1))
  (t
-  ;; 行番号
-  (global-linum-mode t)
-  ;; 行番号フォーマット
-  (setq linum-format "%3d")
   ;;スクロールバー
   (scroll-bar-mode t)))
-
 
 
 ;; 列番号
