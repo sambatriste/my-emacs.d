@@ -28,6 +28,9 @@
   (scroll-bar-mode t)))
 
 
+;; 右から左に読む言語に対応させないことで描画高速化
+(setq-default bidi-display-reordering nil)
+
 ;; 列番号
 (column-number-mode t)
 
