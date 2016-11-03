@@ -39,7 +39,7 @@
              ("<tab>" . nil)
              ("TAB" . nil)
              ("C-i" . nil)
-             ("C-o" . yas/expand)))
+             ("C-o" . yas-expand)))
 
 
 ;;; projectile
@@ -83,13 +83,6 @@
   (setq truncate-lines nil)
   ;; 折り返し表示ON/OFF
   (global-set-key (kbd "C-c l") 'toggle-truncate-lines))
-
-
-(use-package auto-save-buffers-enhanced
-  :config
-  (setq auto-save-buffers-enhanced-interval 10)
-  (auto-save-buffers-enhanced t))
-
 
 ;; auto-revertマイナーモードをdiminishしたいので明示的に設定を記載する。
 (with-eval-after-load "autorevert"
