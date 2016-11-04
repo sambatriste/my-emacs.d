@@ -1,11 +1,12 @@
 ;;; -*- coding: utf-8-unix -*-
 
-
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-
+(setq package-archives
+      '(;("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa-stable" . "http://stable.melpa.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ;("marmalade" . "https://marmalade-repo.org/packages/")
+        ))
 
 
 (package-initialize)
