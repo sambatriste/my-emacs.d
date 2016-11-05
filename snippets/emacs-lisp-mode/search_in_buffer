@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: search_in_buffer
+# key: search_in_buffer
+# --
+(save-excursion
+  (goto-char (point-min))
+  (while (re-search-forward "$1" nil t)
+    ($2)
+    ))
+
