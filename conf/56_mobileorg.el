@@ -13,7 +13,7 @@
 ;; todo.orgはすでについかされているぽい
 ;;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
 (add-to-list 'org-agenda-files (concat org-directory "main.org") t)
-(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
+;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
 ;;(add-to-list 'org-agenda-files (concat org-directory "scrum.org") t)
 
 
