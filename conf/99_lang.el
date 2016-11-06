@@ -13,7 +13,8 @@
   (setq file-name-coding-system 'utf-8-unix)
   (setq locale-coding-system 'utf-8-unix)
   (set-terminal-coding-system 'utf-8-unix)
-  (set-buffer-file-coding-system 'utf-8-unix))
+  (set-buffer-file-coding-system 'utf-8-unix)
+  (setenv "LANG" "ja_JP.UTF-8"))
 
 (when (win?)
   (prefer-coding-system 'utf-8-unix)
