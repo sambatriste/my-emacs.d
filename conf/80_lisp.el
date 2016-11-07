@@ -1,5 +1,6 @@
 ;;; -*- coding: utf-8-unix -*-
 (use-package paredit
+  :diminish paredit-mode
   :config
   (bind-keys :map paredit-mode-map
              ("C-h" . paredit-backward-delete)))
