@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: magic_comment
+# key: magic_comment
+# --
+;;; -*- coding: utf-8-unix -*-
