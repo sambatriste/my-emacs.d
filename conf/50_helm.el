@@ -36,7 +36,8 @@
       (if pj-root-dir
           (helm-ag pj-root-dir)
         (helm-ag))))
-  :bind ("C-x C-g" . helm-do-ag-project-root))
+  :bind
+  ("C-c h" . helm-do-ag-project-root))
 
 
 (use-package helm-descbinds
