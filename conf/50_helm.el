@@ -6,6 +6,7 @@
   (setq helm-quick-update t
         helm-buffers-fuzzy-matching t
         helm-ff-transformer-show-only-basename nil)
+  (helm-migemo-mode 1)
   (bind-keys :map global-map
              ("M-x" . helm-M-x)
              ("C-x C-f" . helm-find-files)
@@ -42,7 +43,7 @@
 
 (use-package helm-descbinds
   :pin "melpa-stable")
-;(use-package helm-migemo)
+
 
 
 ;; M-x helm-miniの入力元を設定
