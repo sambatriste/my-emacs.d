@@ -2,9 +2,9 @@
 
 (require 'package)
 (setq package-archives
-      '(("gnu" . "https://elpa.gnu.org/packages/")
+      '(("gnu" . "http://elpa.gnu.org/packages/")
         ("melpa-stable" . "http://stable.melpa.org/packages/")
-        ("melpa" . "https://melpa.org/packages/")
+        ("melpa" . "http://melpa.org/packages/")
         ;("marmalade" . "https://marmalade-repo.org/packages/")
         ))
 
