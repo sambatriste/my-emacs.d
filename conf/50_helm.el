@@ -6,6 +6,8 @@
   (setq helm-quick-update t
         helm-buffers-fuzzy-matching t
         helm-ff-transformer-show-only-basename nil)
+  (helm-migemo-mode 1)
+  (diminish 'helm-migemo-mode)
   (bind-keys :map global-map
              ("M-x" . helm-M-x)
              ("C-x C-f" . helm-find-files)
@@ -36,12 +38,13 @@
       (if pj-root-dir
           (helm-ag pj-root-dir)
         (helm-ag))))
-  :bind ("C-x C-g" . helm-do-ag-project-root))
+  :bind
+  ("C-c h" . helm-do-ag-project-root))
 
 
 (use-package helm-descbinds
   :pin "melpa-stable")
-;(use-package helm-migemo)
+
 
 
 ;; M-x helm-miniの入力元を設定

@@ -6,7 +6,7 @@
   ;; Suppress error "directory ~/.emacs.d/server is unsafe" on windows.
   (if (win?)
       (defun server-ensure-safe-dir (dir) "Noop" t))
-  (global-set-key (kbd "C-x C-c") 'server-edit)
+  ;(global-set-key (kbd "C-x C-c") 'server-edit) ;; C-x # がデフォルト
   (defalias 'exit 'save-buffers-kill-emacs)
   ;; try to start server if neccesary.
   (cond ((and window-system (not (eq (server-running-p) t)))

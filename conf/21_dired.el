@@ -85,16 +85,15 @@ Creates a buffer if necessary."
 
 ;;http://futurismo.biz/archives/2989
 ;; C-c p でパスをコピー
-(progn
-  (defun my/get-curernt-path ()
-    (if (equal major-mode 'dired-mode)
-        default-directory
-      (buffer-file-name)))
-  (defun my/copy-current-path ()
-    (interactive)
-    (let (fPath (my/get-curernt-path))
-      (when fPath
-        (message "stored path: %s" fPath)
-        (kill-new (file-truename fPath)))))
-  (global-set-key (kbd "C-c p") 'my/copy-current-path)
-  )
+(defun my/get-curernt-path ()
+  (if (equal major-mode 'dired-mode)
+      default-directory
+    (buffer-file-name)))
+(defun my/copy-current-path ()
+  (interactive)
+  (let ((fPath (my/get-curernt-path)))
+    (when fPath
+      (message "stored path: %s" fPath)
+      (kill-new (expand-file-name fPath)))))
+(global-set-key (kbd "C-x p") 'my/copy-current-path)
+
