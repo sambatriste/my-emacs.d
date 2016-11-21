@@ -1,4 +1,4 @@
-
+;;; -*- coding: utf-8-unix -*-
 
 (message "try to start server...")
 (when (require 'server nil t)
