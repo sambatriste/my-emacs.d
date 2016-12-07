@@ -9,18 +9,6 @@
 (setq org-mobile-inbox-for-pull (concat org-directory "mobileorg.org"))
 
 
-;; org-agenda-files に追加 これで管理するorgファイルを指定
-;; todo.orgはすでについかされているぽい
-;;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
-(add-to-list 'org-agenda-files (concat org-directory "main.org") t)
-;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
-;;(add-to-list 'org-agenda-files (concat org-directory "scrum.org") t)
-
-
-;; 主にmobileorg refile 先を指定(MobileOrg側で作成した項目を移動しやすくするだけ)
-(setq org-refile-targets '((org-agenda-files :level . 1)))
-
-
 
 ;; ;;http://d.hatena.ne.jp/kshimo69/20100511/1273562394
 ;; ;; MobileOrgとのやりとりに使用するファイルの置き場

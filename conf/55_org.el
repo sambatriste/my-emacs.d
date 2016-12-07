@@ -6,8 +6,22 @@
 ;;       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")
 ;;         (sequence "APPT(a)" "|" "DONE(d)" "CANCEL(c)")))
 (setq org-directory "~/org/")
-(setq org-default-notes-file (expand-file-name "main.org" org-directory))
+(setq my-org-main-file (if (win?) "scrum.org" "main.org"))
+(setq org-default-notes-file (expand-file-name my-org-main-file org-directory))
 (global-set-key (kbd "C-c a") 'org-agenda)
+
+;; org-agenda-files に追加 これで管理するorgファイルを指定
+;; todo.orgはすでについかされているぽい
+;;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
+(add-to-list 'org-agenda-files my-org-main-file t)
+;(add-to-list 'org-agenda-files (concat org-directory "project.org") t)
+;;(add-to-list 'org-agenda-files (concat org-directory "scrum.org") t)
+
+
+;; 主にmobileorg refile 先を指定(MobileOrg側で作成した項目を移動しやすくするだけ)
+(setq org-refile-targets '((org-agenda-files :level . 1)))
+
+
 
 ;; (save-window-excursion (shell-command (format "emacs-test -l test-minimum -l %s %s &" buffer-file-name buffer-file-name)))
 (setq org-startup-truncated nil)
