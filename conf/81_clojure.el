@@ -1,3 +1,5 @@
+;;; -*- coding: utf-8-unix -*-
+
 (use-package clojure-mode
   :init
   (add-hook 'clojure-mode-hook #'yas-minor-mode)
