@@ -22,6 +22,13 @@
              ;; isearchからhelm-occurを起動
              ("C-o" . helm-occur-from-isearch)))
 
+
+(use-package helm-swoop
+  :config
+  ;;; 検索結果をcycleしない、お好みで
+  (setq helm-swoop-move-to-line-cycle nil))
+
+
 (use-package helm-ls-git
   :config
   (mykie:set-keys nil
