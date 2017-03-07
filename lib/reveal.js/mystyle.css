@@ -2,3 +2,17 @@
     text-align: left;
     margin-left: 55px;
 }
+
+.reveal ul li {
+    text-align: left;
+}
+
+
+.reveal pre {
+    padding: 20px;
+}
+
+.reveal blockquote {
+    width: 90%;
+    text-align: left;
+}
