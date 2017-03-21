@@ -1,4 +1,30 @@
+.reveal {
+    font-family: "Migu 1C", sans-serif;
+}
+
 .reveal p {
     text-align: left;
     margin-left: 55px;
+}
+
+.reveal ul li {
+    text-align: left;
+}
+
+
+.reveal pre {
+    padding: 20px;
+}
+
+.reveal blockquote {
+    width: 90%;
+    text-align: left;
+}
+
+.reveal h4 {
+    font-size: 1.45em;
+}
+
+.reveal section img {
+    border: none;
 }
