@@ -1,0 +1,7 @@
+
+
+(setq js-indent-level 2)
+
+(use-package js2-mode
+  :config
+  (setq js2-basic-offset 2))

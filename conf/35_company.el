@@ -6,7 +6,10 @@
   (global-company-mode)
   (setq company-idle-delay 0.3
         company-minimum-prefix-length 4
-        company-selection-wrap-around t)
+        company-selection-wrap-around t
+        ;; dabbrevで全て小文字になるのを防ぐ
+        ;; http://tam5917.hatenablog.com/entry/2016/04/25/204532
+        company-dabbrev-downcase nil)
   (bind-keys :map company-mode-map
              ("C-i" . company-complete))
   (bind-keys :map company-active-map
