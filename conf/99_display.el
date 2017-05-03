@@ -57,14 +57,18 @@
 
 (use-package hl-line
   :config
-;  (global-hl-line-mode 1)
   (set-face-background 'hl-line "LemonChiffon")
-  (defun global-hl-line-timer-function ()
-    (global-hl-line-unhighlight-all)
-    (let ((global-hl-line-mode t))
-      (global-hl-line-highlight)))
-  (setq global-hl-line-timer
-        (run-with-idle-timer 0.04 t 'global-hl-line-timer-function)))
+  (cond
+   ;; MacではIME入力時にちらつきが発生するのでタイマーは使用しない
+   ((mac?)
+    (global-hl-line-mode 1))
+   (t
+    (defun global-hl-line-timer-function ()
+      (global-hl-line-unhighlight-all)
+      (let ((global-hl-line-mode t))
+        (global-hl-line-highlight)))
+    (setq global-hl-line-timer
+          (run-with-idle-timer 0.04 t 'global-hl-line-timer-function)))))
 
 ;; Gitの変更箇所を表示
 (use-package git-gutter-fringe
