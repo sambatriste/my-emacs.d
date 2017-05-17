@@ -3,9 +3,11 @@
 ac-comphist.dat
 auto-save-list/
 elpa/
+bookmarks
 history
 recentf
 server/server
+projectile.cache
 projectile-bookmarks.eld
 eshell/
 undohist/
