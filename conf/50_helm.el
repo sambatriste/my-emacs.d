@@ -15,7 +15,8 @@
              ("C-x b" . helm-buffers-list)
              ("M-y" . helm-show-kill-ring)
              ;; helm-occurの起動
-             ("C-M-o" . helm-occur)
+             ;;("C-M-o" . helm-occur)
+             ("C-M-o" . helm-swoop)
              ("C-M-r" . helm-recentf)
              ("C-M-g" . helm-ag))
   (bind-keys :map isearch-mode-map
