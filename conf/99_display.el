@@ -90,9 +90,9 @@
 
 (if (and (win?) (window-system))
     (setq initial-frame-alist
-          '((width . 130)  ; フレーム幅(文字数)
-            (height . 69)  ; フレーム高(文字数)
+          '((width . 133)  ; フレーム幅(文字数)
+            (height . 66)  ; フレーム高(文字数)
             (top . 0)      ; フレームの Y 位置(ピクセル数)
-            (left . 960)   ; フレームの X 位置(ピクセル数)
+            (left . 953)   ; フレームの X 位置(ピクセル数)
             )))
 

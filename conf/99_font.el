@@ -30,8 +30,37 @@
           ("-cdac$" . 1.3))))
 
 (when (win?)
-  (set-frame-font "Migu 1M-11")
-  (set-default-font "Migu 1M-11")
-;;      (set-frame-font "ARISAKA-等幅-10")
-;;      (set-frame-font "Consolas-11")
+
+;; http://d.hatena.ne.jp/eggtoothcroc/20130102/p1
+  
+;; フォントフォントフォントフ
+;; abcdefghijklmnopqrstuvwxyz 
+;; ABCDEFGHIJKLMNOPQRSTUVWXYZ
+;; `1234567890-=\[];',./
+;; ~!@#$%^&*()_+|{}:"<>?
+;;
+;; 壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五
+;; 123456789012345678901234567890123456789012345678901234567890
+;; ABCdeＡＢＣｄｅ
+;;
+;; ┌─────────────────────────────┐
+;; │　   　　罫線                │
+;; └─────────────────────────────┘
+;;
+
+;; | ABC        | DEF        |
+;; |------------+------------|
+;; | あいうえお | かきくけこ |
+;; | 123456     | 789        |
+  
+  (set-face-attribute 'default nil :family "Consolas" :height 101)
+  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "MeiryoKe_Console"))
+  (setq face-font-rescale-alist '(("MeiryoKe_Console" . 1.08)))
+
+;;  (set-frame-font "MyricaM M-11")
+  ;;(set-default-font "Migu 1M-11")
+  
+;;      (set-frame-font "ARISAKA-等幅-12")
+  ;;      (set-frame-font "Consolas-11")
   )
+
