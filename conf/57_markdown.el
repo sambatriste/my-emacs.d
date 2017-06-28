@@ -1,5 +1,14 @@
 ;;; -*- coding: utf-8-unix -*-
 
+;; http://qiita.com/syogi_wap/items/53947998da905e8b87a8
+(let* ((pandoc-home (cond
+                    ((win?) (expand-file-name "~/AppData/Local/Pandoc/"))))
+       (pandoc-bin (expand-file-name (concat pandoc-home "pandoc.exe")))
+       (css (concat pandoc-home "github.css")))
+  (setq markdown-command 
+        (concat pandoc-bin " -s --self-contained -t html5 -c" css)))
+
+
 (defun convert-orgtbl-to-gfm ()
   "バッファ内のorgtblをGFMのテーブルに変換します。"
   (interactive)
