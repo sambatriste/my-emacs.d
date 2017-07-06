@@ -1,6 +1,4 @@
-
-
-;(use-package org-present)
+;;; -*- coding: utf-8-unix -*-
 
 (use-package ox-reveal
   :config
