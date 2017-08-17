@@ -70,10 +70,8 @@
 (defadvice org-agenda-redo (around org-agenda-redo-around)
   (let ((system-time-locale "English"))
     ad-do-it))
-(custom-set-variables
- '(org-agenda-format-date "%Y/%m/%d (%a)"))
-(custom-set-faces
- '(org-agenda-date ((t :weight bold))))
+(setq org-agenda-format-date "%Y/%m/%d (%a)")
+(setq org-agenda-date ((t :weight bold)))
 
 
 
@@ -95,11 +93,6 @@
 (setq org-agenda-skip-timestamp-if-done nil)
 
 
-(custom-set-variables
- '(org-agenda-format-date "%Y/%m/%d (%a)")
- )
-(custom-set-faces
- '(org-agenda-date ((t :weight bold)) t))
 
 ;; deadline の表示が早すぎるので
 (setq org-deadline-warning-days 7)
