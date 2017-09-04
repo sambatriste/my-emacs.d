@@ -81,7 +81,7 @@ Creates a buffer if necessary."
   (if (my-parent-dir?) (dired-my-up-directory)
     (my-x-open (dired-get-filename))))
 
-(define-key dired-mode-map "o" 'dired-open-file)
+(define-key dired-mode-map "O" 'dired-open-file)
 
 ;;http://futurismo.biz/archives/2989
 ;; C-c p でパスをコピー
