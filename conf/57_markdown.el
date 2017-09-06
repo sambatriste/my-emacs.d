@@ -40,4 +40,3 @@
               t    ;; buffer-local
               ))
   (add-hook 'markdown-mode-hook 'my-markdown-hook))
-
