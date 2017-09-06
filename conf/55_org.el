@@ -71,7 +71,7 @@
   (let ((system-time-locale "English"))
     ad-do-it))
 (setq org-agenda-format-date "%Y/%m/%d (%a)")
-(setq org-agenda-date ((t :weight bold)))
+
 
 
 
