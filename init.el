@@ -10,4 +10,3 @@
    (require 'init-loader)
    (init-loader-load (expand-file-name "conf" my-emacsd)))
 
-(cd "~")
