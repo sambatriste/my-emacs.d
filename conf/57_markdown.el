@@ -1,7 +1,7 @@
 ;;; -*- coding: utf-8-unix -*-
 
 (use-package markdown-mode
-  :init
+  :config
   (bind-keys :map markdown-mode-map
              ("<Tab>" . markdown-cycle)
              ("<S-tab>" . markdown-shifttab)
