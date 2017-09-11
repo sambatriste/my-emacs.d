@@ -3,6 +3,7 @@
 (use-package web-mode
   :mode (("\\.html?\\'" . web-mode)
          ("\\.jsp\\'"   . web-mode)
+         ("\\.tag\\'"   . web-mode)
          ("\\.js\\'"   . web-mode))
   :config
   (setq web-mode-markup-indent-offset 2)
