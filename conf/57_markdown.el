@@ -7,7 +7,7 @@
              ("<S-tab>" . markdown-shifttab)
              ("C-M-n" . outline-next-visible-heading)
              ("C-M-p" . outline-previous-visible-heading))
-  
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
   ;; Pandocの設定
   ;; http://qiita.com/syogi_wap/items/53947998da905e8b87a8
   (let* ((pandoc-home (cond
@@ -38,6 +38,6 @@
               'convert-orgtbl-to-gfm
               nil
               t    ;; buffer-local
-              ))
-  (add-hook 'markdown-mode-hook 'my-markdown-hook))
+              
+              (add-hook 'markdown-mode-hook 'my-markdown-hook))))
 
