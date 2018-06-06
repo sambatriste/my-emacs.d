@@ -164,7 +164,7 @@
 (setq org-use-property-inheritance (quote ("OWNER")))
 
 ;; plantumlを使う
-(setq org-plantuml-jar-path "~/.emacs.d/lib/plantuml.jar")
+(setq org-plantuml-jar-path (expand-file-name "~/.emacs.d/lib/plantuml.jar"))
 (defun org-mode-init ()
   (org-babel-do-load-languages
    'org-babel-load-languages
