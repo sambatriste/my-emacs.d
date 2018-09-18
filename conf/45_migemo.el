@@ -4,8 +4,9 @@
   (if (win?)
       ;;http://d.hatena.ne.jp/bobchin/20100831
       (progn
-        (setq migemo-command "C:/tools/cmigemo-default-win64/cmigemo.exe")
-        (setq migemo-dictionary "C:/tools/cmigemo-default-win64/dict/utf-8/migemo-dict" )))
+        ;; https://github.com/mhatta/emacs-26-x86_64-win-ime/blob/master/README.md#おまけ-cmigemo
+        (setq migemo-command "C:/tools/cmigemo-1.3-mingw64-20180629/cmigemo.exe")
+        (setq migemo-dictionary "C:/tools/cmigemo-1.3-mingw64-20180629/dict/utf-8/migemo-dict" )))
   (if (mac?)
       (progn
         (setq migemo-command "/usr/local/bin/cmigemo")
