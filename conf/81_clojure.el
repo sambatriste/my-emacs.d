@@ -8,7 +8,7 @@
 
 (use-package cider
   :init
-  (add-hook 'cider-mode-hook #'clj-refactor-mode)
+  ;(add-hook 'cider-mode-hook #'clj-refactor-mode)
   (add-hook 'cider-mode-hook #'company-mode)
   (add-hook 'cider-repl-mode-hook #'company-mode)
   (add-hook 'cider-repl-mode-hook #'my/lisp-mode-hook)
@@ -25,7 +25,8 @@
 ;; windowsでエラーがでたので
 ;;(use-package cider-eval-sexp-fu)
 
-(use-package clj-refactor
-  :diminish clj-refactor-mode
-  :config (cljr-add-keybindings-with-prefix "C-c j"))
+;; emacs26でエラーが出たので
+;; (use-package clj-refactor
+;;   :diminish clj-refactor-mode
+;;   :config (cljr-add-keybindings-with-prefix "C-c j"))
 

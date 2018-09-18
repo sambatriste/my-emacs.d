@@ -25,5 +25,6 @@
   ;;(setq migemo-options '("-q" "--emacs"))
   (setq migemo-use-pattern-alist t)
   (setq migemo-use-frequent-pattern-alist t)
-  (setq migemo-pattern-alist-length 1024)
+  ;; この値を大きくするとexitが遅くなる。
+  ;;(setq migemo-pattern-alist-length 256)
   (migemo-init))
