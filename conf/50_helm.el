@@ -50,8 +50,8 @@
   ("C-c h" . helm-do-ag-project-root))
 
 
-(use-package helm-descbinds
-  :pin "melpa-stable")
+;; (use-package helm-descbinds
+;;   :pin "melpa-stable")
 
 
 
