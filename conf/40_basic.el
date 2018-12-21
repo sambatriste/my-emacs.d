@@ -24,7 +24,7 @@
 ;;  (setq show-paren-style 'parenthesis)
   
   (setq show-paren-style 'expression)
-  (set-face-attribute 'show-paren-match-face nil
+  (set-face-attribute 'show-paren-match nil
                       :background "#F0F0FF"
                       :foreground nil
                       :weight 'normal)
