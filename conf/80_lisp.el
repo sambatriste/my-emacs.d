@@ -36,7 +36,7 @@
   (defun my-lispxmp ()
     "evalueate sexp and print as comment."
     (interactive)
-    (insert-string "  ; =>")
+    (insert "  ; =>")
     (lispxmp)
     (end-of-line))
   :bind
