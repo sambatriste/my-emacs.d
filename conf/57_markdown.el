@@ -38,6 +38,12 @@
               'convert-orgtbl-to-gfm
               nil
               t    ;; buffer-local
-              
-              (add-hook 'markdown-mode-hook 'my-markdown-hook))))
+              ))
+  (add-hook 'markdown-mode-hook 'my-markdown-hook)
+  (add-hook 'gfm-mode-hook 'my-markdown-hook)
+  )
+
+
+
+
 
