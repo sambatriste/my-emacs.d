@@ -63,3 +63,8 @@
   ;;      (set-frame-font "Consolas-11")
   )
 
+;; Windowsでemojiとかをペーストすると動作が重くなる問題の暫定対処
+(when (win?)
+  (global-font-lock-mode -1)
+  (global-font-lock-mode t))
+
