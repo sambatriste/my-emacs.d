@@ -1,5 +1,4 @@
 ;;; -*- coding: utf-8-unix -*-
 
-(use-package nlinum
-  :config
-  (global-nlinum-mode t))
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode))
