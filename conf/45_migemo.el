@@ -4,9 +4,8 @@
   (if (win?)
       ;;http://d.hatena.ne.jp/bobchin/20100831
       (progn
-        ;; https://github.com/mhatta/emacs-26-x86_64-win-ime/blob/master/README.md#おまけ-cmigemo
-        (setq migemo-command "C:/tools/cmigemo-1.3-mingw64-20180629/cmigemo.exe")
-        (setq migemo-dictionary "C:/tools/cmigemo-1.3-mingw64-20180629/dict/utf-8/migemo-dict" )))
+        (setq migemo-command "C:/tools/cmigemo-default-win64/cmigemo.exe")
+        (setq migemo-dictionary "C:/tools/cmigemo-default-win64/dict/utf-8/migemo-dict" )))
   (if (mac?)
       (progn
         (setq migemo-command "/usr/local/bin/cmigemo")
@@ -27,5 +26,5 @@
   (setq migemo-use-pattern-alist t)
   (setq migemo-use-frequent-pattern-alist t)
   ;; この値を大きくするとexitが遅くなる。
-  ;;(setq migemo-pattern-alist-length 256)
+  (setq migemo-pattern-alist-length 256)
   (migemo-init))
