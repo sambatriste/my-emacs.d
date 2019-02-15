@@ -56,7 +56,8 @@
   (set-face-attribute 'default nil :family "Consolas" :height 101)
   (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "MeiryoKe_Console"))
   (setq face-font-rescale-alist '(("MeiryoKe_Console" . 1.08)))
-
+  ;; http://misohena.jp/blog/2017-09-26-symbol-font-settings-for-emacs25.html
+  (setq use-default-font-for-symbols nil)
 ;;  (set-frame-font "MyricaM M-11")
   ;;(set-default-font "Migu 1M-11")
   ;;      (set-frame-font "ARISAKA-等幅-10")
