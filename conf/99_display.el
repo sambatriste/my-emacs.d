@@ -88,7 +88,7 @@
               (left . 48)    ; フレームの X 位置(ピクセル数)
               ))))
 
-(if (and (win?) (window-system))
+(if (and (win?) (office?) (window-system))
     (setq initial-frame-alist
           '((width . 133)  ; フレーム幅(文字数)
             (height . 66)  ; フレーム高(文字数)

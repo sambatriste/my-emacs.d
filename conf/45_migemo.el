@@ -3,9 +3,10 @@
   :config
   (if (win?)
       ;;http://d.hatena.ne.jp/bobchin/20100831
-      (progn
-        (setq migemo-command "C:/tools/cmigemo-default-win64/cmigemo.exe")
-        (setq migemo-dictionary "C:/tools/cmigemo-default-win64/dict/utf-8/migemo-dict" )))
+      (let ((migemo-home (expand-file-name "lib/cmigemo-default-win64/" user-emacs-directory)))
+        ;; https://github.com/mhatta/emacs-26-x86_64-win-ime/blob/master/README.md#おまけ-cmigemo
+        (setq migemo-command (expand-file-name "cmigemo.exe" migemo-home ))
+        (setq migemo-dictionary (expand-file-name "dict/utf-8/migemo-dict" migemo-home))))
   (if (mac?)
       (progn
         (setq migemo-command "/usr/local/bin/cmigemo")

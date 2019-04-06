@@ -31,3 +31,5 @@
 (defun unix? ()
   (or (mac?) (linux?) (arm?)))
 
+(defun office? ()
+  (string-match "TISNT" (getenv "USERDOMAIN")))

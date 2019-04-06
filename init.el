@@ -5,9 +5,8 @@
 ;; You may delete these explanatory comments.
 ;(package-initialize)
 
-(let ((my-emacsd "~/.emacs.d/"))
-   (add-to-list 'load-path (expand-file-name  "elisp" my-emacsd))
-   (require 'init-loader)
-   (init-loader-load (expand-file-name "conf" my-emacsd)))
+(add-to-list 'load-path (expand-file-name  "elisp" user-emacs-directory))
+(require 'init-loader)
+(init-loader-load (expand-file-name "conf" user-emacs-directory))
 
 (cd "~")
