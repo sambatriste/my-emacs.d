@@ -59,8 +59,8 @@
 ;; 見積り時間
 (setq org-agenda-time-grid
       '((daily today require-timed)
-        "----------------"
-        (0900 1000 1100 1200 1300 1400 1500 1600 1700)))
+        (0900 1000 1100 1200 1300 1400 1500 1600 1700)
+        "......" "----------------"))
 
 
 ;;http://valvallow.blogspot.jp/2011/02/org-agenda-weekly-view.html
