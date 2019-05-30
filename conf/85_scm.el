@@ -8,6 +8,7 @@
 
   ;; vc-gitを無効
   ;; http://stackoverflow.com/questions/5748814/how-does-one-disable-vc-git-in-emacs
-  (delete 'Git vc-handled-backends))
+  ;(delete 'Git vc-handled-backends)
+  )
 
 

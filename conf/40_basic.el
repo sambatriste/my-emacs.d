@@ -84,6 +84,3 @@
   ;; 折り返し表示ON/OFF
   (global-set-key (kbd "C-c l") 'toggle-truncate-lines))
 
-;; auto-revertマイナーモードをdiminishしたいので明示的に設定を記載する。
-(with-eval-after-load "autorevert"
-  (diminish 'auto-revert-mode))

@@ -7,7 +7,7 @@
         helm-buffers-fuzzy-matching t
         helm-ff-transformer-show-only-basename nil)
   (helm-migemo-mode 1)
-  (diminish 'helm-migemo-mode)
+  
   (bind-keys :map global-map
              ("M-x" . helm-M-x)
              ("C-x C-f" . helm-find-files)
@@ -21,7 +21,8 @@
              ("C-M-g" . helm-ag))
   (bind-keys :map isearch-mode-map
              ;; isearchからhelm-occurを起動
-             ("C-o" . helm-occur-from-isearch)))
+             ("C-o" . helm-occur-from-isearch))
+  :diminish helm-migemo-mode)
 
 
 (use-package helm-swoop
