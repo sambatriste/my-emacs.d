@@ -24,3 +24,5 @@
 ;(setq use-package-always-pin "melpa-stable")
 (setq use-package-verbose t)
 
+;; diminishが効かなくなったので明示的にuse-packageした(use-packageの依存ライブラリのはずだが...)
+(use-package diminish)
