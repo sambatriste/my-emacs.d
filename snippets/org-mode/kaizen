@@ -1,0 +1,27 @@
+# -*- coding: utf-8-unix; mode: snippet; require-final-newline: nil -*-
+# name: gyoumu_kaizen
+# key: kaizen
+# binding: direct-keybinding
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+#+TITLE: `(format-time-string "%Y/%m/%d" (current-time))`
+
+* 達成したいゴール
+
+提案する時のお客さんの納得感を高めることで成約率を上げたい
+
+* 解決したい問題（できれば根拠）
+
+営業資料のnページ目以降に、事例が少なくてお客さんがイメージをつかめない
+
+** 根拠
+
+もっと事例がほしいというメールを先月5件以上もらった。
+
+* 解決策
+
+今の営業資料に事例を3つ追加する。
+
+* 最小コストで検証する方法
+
+自分が作成して、一ヶ月やってみて、事例の問い合わせが減れば全営業に展開する。

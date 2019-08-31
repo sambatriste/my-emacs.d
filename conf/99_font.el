@@ -27,7 +27,9 @@
           (".*courier-bold-.*-mac-roman" . 1.0)
           (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
           (".*monaco-bold-.*-mac-roman" . 0.9)
-          ("-cdac$" . 1.3))))
+          ("-cdac$" . 1.3)))
+  ;; 記号をデフォルトのフォントにしない。(for Emacs 25.2)
+  (setq use-default-font-for-symbols nil))
 
 (when (win?)
 
