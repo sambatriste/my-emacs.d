@@ -3,7 +3,7 @@
 (use-package markdown-mode
   :config
   (bind-keys :map markdown-mode-map
-             ("<Tab>" . markdown-cycle)
+             ("<tab>" . markdown-cycle)
              ("<S-tab>" . markdown-shifttab)
              ("C-M-n" . outline-next-visible-heading)
              ("C-M-p" . outline-previous-visible-heading))
