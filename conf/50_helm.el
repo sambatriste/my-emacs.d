@@ -40,6 +40,7 @@
 
 (use-package helm-ag
   :config
+  (setq helm-ag-base-command "rg --vimgrep --no-heading")
   (defun helm-projectile-ag ()
     "Projectileとagを連携"
     (interactive)
