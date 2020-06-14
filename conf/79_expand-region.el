@@ -2,4 +2,4 @@
 
 (use-package expand-region
   :init
-  (bind-key "C-M-SPC" 'er/expand-region))
+  (bind-key "C-S-SPC" 'er/expand-region))
