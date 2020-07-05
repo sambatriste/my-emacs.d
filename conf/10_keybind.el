@@ -16,6 +16,8 @@
 ;;; 矩形編集を開始
 (global-set-key (kbd "C-<return>") 'cua-rectangle-mark-mode)
 
+(global-set-key (kbd "C->") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-<") 'shrink-window-horizontally)
 
 
 (cond

@@ -11,9 +11,9 @@
 ;; #foo.txt#
 
 
-(let* ((tmp-dir (or (getenv "TMPDIR") (getenv "TMP")))
-       (emacs-auto-save-dir (expand-file-name (concat tmp-dir "/emacs-auto-save/"))))
-  (setq auto-save-file-name-transforms `((".*" ,emacs-auto-save-dir t))))
+;; (let* ((tmp-dir (or (getenv "TMPDIR") (getenv "TMP")))
+;;        (emacs-auto-save-dir (expand-file-name (concat tmp-dir "/emacs-auto-save/"))))
+;;   (setq auto-save-file-name-transforms `((".*" ,emacs-auto-save-dir t))))
 ;;
 
 
