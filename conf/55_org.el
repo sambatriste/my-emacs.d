@@ -133,6 +133,9 @@
 (define-key org-mode-map (kbd "<M-f12>") 'org-agenda-columns)
 
 
+(define-key org-mode-map (kbd "RET") 'org-return-and-maybe-indent)
+(define-key org-mode-map (kbd "C-m") 'org-return)
+
 ;; mobileOrgが振るIDがめっちゃ重複するのでオフにする。
 (setq org-mobile-force-id-on-agenda-items nil)
 
@@ -170,3 +173,5 @@
    'org-babel-load-languages
    (add-to-list 'org-babel-load-languages '(plantuml . t))))
 (add-hook 'org-mode-hook 'org-mode-init)
+
+
