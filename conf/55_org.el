@@ -29,15 +29,14 @@
 
 ;;http://d.hatena.ne.jp/rubikitch/20100819/org
 (setq org-capture-templates
-      '(("t" "Todo" entry
-         (file+headline nil "Inbox")
-         "** TODO %?\n   %i\n   %a\n   %t")
-        ;; ("b" "Bug" entry
-        ;;  (file+headline nil "Inbox")
-        ;;  "** TODO %?   :bug:\n   %i\n   %a\n   %t")
-        ("i" "Idea" entry
-         (file+headline nil "New Ideas")
-         "** %?\n   %i\n   %a\n   %t")))
+      `(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")     "** TODO   %?\n   %i\n   %a\n   %t")
+        ("i" "Idea" entry (file+headline org-default-notes-file "New Ideas") "** %?\n   %i\n   %a\n   %t")
+("a" "あっと思ったことを さっとφ(..)メモする"
+ entry
+ (file+headline nil "MEMO")
+ "* %U%?\n\n%a\n%F\n"
+ :empty-lines 1)
+        ))
 (global-set-key (kbd "C-c c") 'org-capture)
 
 
@@ -133,7 +132,7 @@
 (define-key org-mode-map (kbd "<M-f12>") 'org-agenda-columns)
 
 
-(define-key org-mode-map (kbd "RET") 'org-return-and-maybe-indent)
+(define-key org-mode-map (kbd "<return>") 'org-return-and-maybe-indent)
 (define-key org-mode-map (kbd "C-m") 'org-return)
 
 ;; mobileOrgが振るIDがめっちゃ重複するのでオフにする。
