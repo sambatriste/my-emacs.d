@@ -31,11 +31,6 @@
 (setq org-capture-templates
       `(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")     "** TODO   %?\n   %i\n   %a\n   %t")
         ("i" "Idea" entry (file+headline org-default-notes-file "New Ideas") "** %?\n   %i\n   %a\n   %t")
-("a" "あっと思ったことを さっとφ(..)メモする"
- entry
- (file+headline nil "MEMO")
- "* %U%?\n\n%a\n%F\n"
- :empty-lines 1)
         ))
 (global-set-key (kbd "C-c c") 'org-capture)
 
