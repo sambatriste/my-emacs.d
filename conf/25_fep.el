@@ -59,4 +59,17 @@
                                  (deactivate-input-method)
                                  (apply orig-fun args)))))
 
+;; https://qiita.com/TomokiYamashit3/items/915e270b20f9b4e4a1d0#%E6%97%A5%E6%9C%AC%E8%AA%9E%E9%96%A2%E4%BF%82
+;;; Macの日本語関係
+(when (fboundp 'mac-input-source)
+  (defun my-mac-selected-keyboard-input-source-chage-function ()
+    (let ((mac-input-source (mac-input-source)))
+      (set-cursor-color
+       (if (string-match "com.google.inputmethod.Japanese.Roman" mac-input-source)
+            "black" "VioletRed3"))))
+  (add-hook 'mac-selected-keyboard-input-source-change-hook
+            'my-mac-selected-keyboard-input-source-chage-function))
+
+(when (functionp 'mac-auto-ascii-mode)  ; ミニバッファに入力時、自動的に英語モード
+  (mac-auto-ascii-mode 1))
 
