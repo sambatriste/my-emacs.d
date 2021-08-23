@@ -19,6 +19,9 @@
 (global-set-key (kbd "C->") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-<") 'shrink-window-horizontally)
 
+;; F5でファイル再読み込み
+(global-set-key (kbd "<f5>") 'revert-buffer)
+
 
 (cond
  ;; Macの場合
