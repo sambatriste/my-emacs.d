@@ -6,7 +6,9 @@
 ;;       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")
 ;;         (sequence "APPT(a)" "|" "DONE(d)" "CANCEL(c)")))
 (setq org-directory "~/org/")
-(setq my-org-main-file (if (win?) "scrum.org" "main.org"))
+(setq my-org-main-file
+      (cond ((and (win?) (getenv "U9000C18725-O1") "scrum.org"))
+            (t "main.org"))
 (setq org-default-notes-file (expand-file-name my-org-main-file org-directory))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
