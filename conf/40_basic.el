@@ -25,7 +25,7 @@
   
   (setq show-paren-style 'expression)
   (set-face-attribute 'show-paren-match nil
-                      :background "#F0F0FF"
+                      :background "#e0e0ff"
                       :foreground nil
                       :weight 'normal)
   (show-paren-mode 1))
