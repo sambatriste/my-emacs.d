@@ -3,7 +3,9 @@
   :diminish paredit-mode
   :config
   (bind-keys :map paredit-mode-map
-             ("C-h" . paredit-backward-delete)))
+             ("C-h" . paredit-backward-delete))
+  (unbind-key "M-s" paredit-mode-map)
+  (unbind-key "C-M-r" paredit-mode-map))
 
 (use-package eldoc
   :defer t
