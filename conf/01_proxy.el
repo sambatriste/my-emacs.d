@@ -6,4 +6,3 @@
             ("http" . "oskproxy.intra.tis.co.jp:8080")
             ("https" . "oskproxy.intra.tis.co.jp:8080"))))
 
-
